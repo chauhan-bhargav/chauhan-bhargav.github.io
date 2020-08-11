@@ -261,6 +261,7 @@ p {
 #home {
 	background-image: url(../img/slide8.jpg);
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: top center;
 	position: relative;
 	z-index: 1;
@@ -1302,9 +1303,6 @@ p {
 	}
 }
 
-
-
-
   /* ====================================================== */
 
 .loader {
@@ -1321,9 +1319,9 @@ p {
   }
 
 .loader .inner {
-	width: 100px;
-	height: 100px;
-	background: url(../img/logo/logo_metallic.png);
+	width: 60px;
+	height: 60px;
+	background: url(../img/preloaders/5.gif);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
