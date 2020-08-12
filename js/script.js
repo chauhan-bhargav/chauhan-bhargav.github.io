@@ -1,9 +1,11 @@
 $(window).on("load", function(){
     setTimeout(function(){
-        $(".loader .inner").fadeOut(500, function(){
-            $(".loader").fadeOut(300,"linear");
+        $("#loader .loader_gif").fadeOut(500, function(){
+            $("#loader").fadeOut(300,"linear");
         });
-    }, 500)
+    }, 500);
+    $("h1").removeClass("preload");
+    $("span").removeClass("preload");
 });
 
 
