@@ -1246,7 +1246,8 @@ p {
     width: 100%;
     height: 100%;
 	position: relative;
-	border: 2px solid black;
+	/* padding: 2px;
+	border: 2px solid black; */
 }
 
 .gal-container a:hover{
