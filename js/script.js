@@ -46,10 +46,7 @@ $(function() {
 
 
     var skillsTopOffset = $(".skills").offset().top;
-    console.log(skillsTopOffset);
-    
     $(window).scroll(function(){
-        console.log(window.pageYOffset);
     	if(window.pageYOffset > skillsTopOffset - $(window).height() + 300){
     		$('.chart').easyPieChart({
                 easing: 'easeInOut',
