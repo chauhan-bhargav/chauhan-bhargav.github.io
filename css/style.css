@@ -48,6 +48,7 @@ p {
 	line-height: 2.2rem;
 	list-style-position: inside;
 	padding-bottom: 15px;
+	letter-spacing: 0.05rem;
 }
 
 .section-title {
@@ -123,7 +124,7 @@ p {
 #header .header .nav-bar .brand img {
 	width: 65px;
 	height: 65px;
-	margin: 8px 5px 5px 5px;
+	margin: 5px;
 }
 
 #header .header .nav-bar .brand h1 {
@@ -596,11 +597,10 @@ p {
 }
 
 #projects .project-info p{
-	font-size: 1.5rem;
 	font-weight: 300;
-    line-height: 2.5rem;
     margin-top: 5px;
-    letter-spacing: 0.05rem;
+	font-size: 1.45rem;
+	line-height: 2.2rem;
 }
 
 #projects img {
@@ -795,7 +795,7 @@ p {
 #footer p{
 	text-align: center;
 	padding: 0 10px;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 }
 
 #footer .social-icon {
@@ -826,12 +826,12 @@ p {
 
 @media only screen and (max-width: 768px) {
 	#header .header .nav-bar .brand h1 {
-		font-size: 2rem;
+		font-size: 1.9rem;
 	}
 
 	#header .header .nav-bar .brand a{
-		margin-top: 28px;
-		margin-left: 0;
+		margin-top: 27px;
+		margin-left: 0px;
 	}
 }
 
