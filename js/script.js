@@ -1,6 +1,6 @@
 $(window).on("load", function(){
     setTimeout(function(){
-        $("#loader .loader_gif").fadeOut(500, function(){
+        $("#loader .loader_gif, #loader .greeting").fadeOut(500, function(){
             $("#loader").fadeOut(300,"linear");
         });
     }, 500);

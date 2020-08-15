@@ -37,9 +37,10 @@ p {
 	color: white;
 	text-align: left;
 	font-size: 1.4rem;
-	line-height: 2.5rem;
+	line-height: 2.2rem;
 	margin-top: 5px;
 	letter-spacing: 0.05rem;
+	font-weight: 400;
 }
 
 .list {
@@ -382,11 +383,11 @@ p {
 #skills .skills-top p {
 	color: black;
 	text-align: center;
-	margin-left: 10px ;
-	margin-right: 10px ;
+	margin-left: 10px;
+	margin-right: 10px;
 	font-size: 1.4rem;
 	margin-top: 5px;
-	line-height: 2.5rem;
+	line-height: 2.2rem;
 	font-weight: 400;
 	letter-spacing: 0.3rem;
 }
@@ -516,12 +517,12 @@ p {
 #skills .skills-item h2 {
 	font-size: 2rem;
 	color: white;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
 	text-transform: uppercase;
 }
 
 #skills .skills-item p {
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.05rem;
     font-weight: 400;
 }
 
@@ -676,7 +677,8 @@ p {
 
 #about .cta {
 	color: black;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
+	margin-top: 20px;
 	padding: 10px 20px;
 	font-size: 2rem;
 }
@@ -1309,7 +1311,6 @@ p {
 	outline: none;
 }
 
-
 @media screen and (max-width: 940px) {
     .gal-container a {
         width: 48%;
@@ -1356,18 +1357,29 @@ p {
 	left: 0;
 	z-index: 1000;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
 #loader .loader_gif {
-	width: 70px;
-	height: 70px;
-	background: url(../img/preloaders/1.gif);
+	width: 64px;
+	height: 64px;
+	background: url(../img/preloaders/2.gif);
 	background-repeat: no-repeat;
+	padding-bottom: 80px;
 }
+
+#loader .greeting h1{
+	font-size: 2rem;
+	color: 	white;
+	font-weight: 300;
+	font-family: 'Kaushan Script', cursive;
+}
+
 
 #home .home .preload  {
 	animation: none !important;
 }
+
 
