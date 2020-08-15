@@ -42,6 +42,14 @@ p {
 	letter-spacing: 0.05rem;
 }
 
+.list {
+	text-align: left;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	list-style-position: inside;
+	padding-bottom: 15px;
+}
+
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
@@ -542,14 +550,14 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 80%;
+	width: 85%;
 	margin: 20px auto;
 	overflow: hidden;
 	border-radius: 10px;
 }
 
 #projects .project-info {
-	padding: 30px;
+	padding: 25px;
 	flex-basis: 50%;
 	background-color: white;
 	height: 100%;
@@ -566,14 +574,33 @@ p {
 }
 
 #projects .project-info h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	font-weight: 500;
+	text-transform: uppercase;	
+	
 }
 
 #projects .project-info h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
+	font-size: 2rem;
+	font-weight: 400;
 	margin-top: 10px;
+}
+
+#projects .project-info span{
+	display: block;
+	font-size: 1.5rem;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: rgb(167, 167, 167);
+	font-weight: 300;
+}
+
+#projects .project-info p{
+	font-size: 1.5rem;
+	font-weight: 300;
+    line-height: 2.5rem;
+    margin-top: 5px;
+    letter-spacing: 0.05rem;
 }
 
 #projects img {
@@ -582,7 +609,7 @@ p {
 
 #projects .project-img {
 	flex-basis: 50%;
-	height: 300px;
+	height: auto;
 	overflow: hidden;
 	position: relative;
 
@@ -599,7 +626,7 @@ p {
 	background: -webkit-linear-gradient(to right, #1f4266, #2e6c96); 
 	background: linear-gradient(to right, #1f4266, #2e6c96); */
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.2;
+	opacity: 0.1;
 }
 
 #projects .project-img img{
@@ -1103,8 +1130,8 @@ p {
 	border-bottom: 1px solid #dddddd;
 }
 .modal-content .modal-header h1{
-	font-size: 2.5rem;
-	font-weight: 400;
+	font-size: 2.3rem;
+	font-weight: 500;
 	text-transform: uppercase;
 	color: black;
 }
@@ -1131,9 +1158,18 @@ p {
 	max-height: 450px;
 	overflow-y: auto;
 }
+
+.modal-content .modal-body h1{
+	font-size: 2.2rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
 .modal-content .modal-body p {
 	color: black;
-	margin: 0 0 15px;
+	margin: 0 0 5px;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
 }
 
 /* .modal-content .modal-body img,
@@ -1230,7 +1266,6 @@ p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
@@ -1261,13 +1296,14 @@ p {
 	font-size: 12px;
 	font-weight: 400;
 }
-
-.working{
-	text-align: center;
+.working {
+	padding-bottom: 20px;
 }
+
 .working video{
 	width: 75%;
-	padding: 20px;
+	margin: auto;
+	padding-top: 5px;
 }
 .working video:focus{
 	outline: none;
@@ -1285,6 +1321,7 @@ p {
 	}
 	.working video{
 		width: 80%;
+		margin: auto;
 	}
 }
 
@@ -1303,7 +1340,7 @@ p {
 	}
 	.working video{
 		width: 100%;
-		padding: 20px 10px 20px 10px;
+		margin: auto;
 	}
 }
 
