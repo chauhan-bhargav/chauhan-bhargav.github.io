@@ -773,7 +773,7 @@ p {
 #footer .footer {
 	min-height: 200px;
 	flex-direction: column;
-	padding-top: 40px;
+	padding-top: 25px;
 	padding-bottom: 40px;
 }
 
@@ -897,7 +897,22 @@ p {
 	}
 	#projects .all-projects .project-info {
 		height: 100%;
+		padding: 30px;
 	}
+
+	#projects .project-info h1 {
+		font-size: 4rem;
+		font-weight: 500;
+	}
+
+	#projects .project-info span{
+		display: inline;
+	}
+
+	#projects .project-info p {
+		font-size: 1.4rem;
+	}
+
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
@@ -1304,7 +1319,6 @@ p {
 
 .working video{
 	width: 75%;
-	margin: auto;
 	padding-top: 5px;
 }
 .working video:focus{
@@ -1320,9 +1334,9 @@ p {
 		height: 100%;
 		position: relative;
 	}
+
 	.working video{
-		width: 80%;
-		margin: auto;
+		width: 100%;
 	}
 }
 
@@ -1372,7 +1386,7 @@ p {
 
 #loader .greeting h1{
 	font-size: 2rem;
-	color: 	white;
+	color:white;
 	font-weight: 300;
 	font-family: 'Kaushan Script', cursive;
 }
