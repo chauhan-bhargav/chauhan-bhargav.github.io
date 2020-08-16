@@ -564,16 +564,14 @@ p {
 #projects .project-info {
 	padding: 25px;
 	flex-basis: 50%;
-	background-color: white;
 	height: 100%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
 	color: white;
-	background-color: rgba(0, 0, 0, 0.9);
-	/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
-
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	
 }
 
 #projects .project-info h1 {
@@ -766,9 +764,8 @@ p {
 /* Footer */
 
 #footer {
-	/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	/* background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
-	background-color: black;
 }
 
 #footer .footer {
