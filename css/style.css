@@ -7,6 +7,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -1184,11 +1185,15 @@ p {
 
 .modal-content .modal-body p {
 	color: black;
-	margin: 0 0 5px;
 	font-size: 1.4rem;
 	line-height: 2.2rem;
 }
 
+.modal-content .modal-body a {
+	color: black;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+}
 /* .modal-content .modal-body img,
 .modal-content .modal-body video{
 	width: 40%;
