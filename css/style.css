@@ -153,7 +153,8 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	background-color: rgb(31, 30, 30);
+	background-color: black;
+	/* background-color: rgb(31, 30, 30); */
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -187,8 +188,9 @@ p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
-	font-size: 10rem;
+	color: rgba(255, 255, 255, 0.089);
+	/* color: rgba(240, 248, 255, 0.021); */
+	font-size: 6.5rem;
 	letter-spacing: 50px;
 	z-index: -1;
 	transition: 0.3s ease letter-spacing;
@@ -390,7 +392,7 @@ p {
 	margin-top: 5px;
 	line-height: 2.2rem;
 	font-weight: 400;
-	letter-spacing: 0.3rem;
+	letter-spacing: 0.2rem;
 }
 
 #skills .skills-bottom {
@@ -568,12 +570,10 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	
-	/* background: #454e55;  
-	background: -webkit-linear-gradient(to right, #1f4266, #2e6c96); 
-	background: linear-gradient(to right, #1f4266, #2e6c96);  */
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
+	background-color: rgba(0, 0, 0, 0.9);
+	/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
+
 }
 
 #projects .project-info h1 {
@@ -766,9 +766,9 @@ p {
 /* Footer */
 
 #footer {
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
 	/* background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
-	/* background-color: black; */
+	background-color: black;
 }
 
 #footer .footer {
@@ -1402,3 +1402,26 @@ p {
 }
 
 
+#contact .contact p{
+    color: black;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    margin-top: 0px;
+    line-height: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}
+
+
+#contact .contact h2 {
+    letter-spacing: 0.2rem;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 10px;
+	margin-right: 10px;
+}
