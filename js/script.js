@@ -15,8 +15,14 @@ $(function() {
     AOS.init({
         duration: 600,
         delay: 50,
+        once: true,
     });
 
+    if($( window ).width()<1200){
+        $(".skills-item").attr("data-aos-delay","0");
+    }
+
+    
     // $('#home').mousemove(function(e){
     //     var moveX = (e.pageX * -1/155); 
     //     var moveY = (e.pageY * -1/155); 

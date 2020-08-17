@@ -107,7 +107,7 @@ p {
 }
 
 #header .header {
-	min-height: 7vh;
+	min-height: 8vh;
 	background-color: rgba(31, 30, 30, 0.24);
 	transition: 0.3s ease background-color;
 }
@@ -119,12 +119,12 @@ p {
 #header .header .nav-bar .brand a{
 	text-align: center;
 	margin-left: 20px;
-	margin-top: 20px; 
+	margin-top: 24px; 
 }
 
 #header .header .nav-bar .brand img {
-	width: 55px;
-	height: 55px;
+	width: 60px;
+	height: 60px;
 	margin: 5px;
 }
 
@@ -207,8 +207,8 @@ p {
 
 #header .hamburger {
 	z-index: 100;
-	height: 55px;
-	width: 55px;
+	height: 60px;
+	width: 60px;
 	display: inline-block;
 	border: 3px solid white;
 	border-radius: 50%;
@@ -234,8 +234,8 @@ p {
 }
 
 #header .hamburger .bar {
-	height: 2.5px;
-	width: 28px;
+	height: 2.2px;
+	width: 32px;
 	position: relative;
 	background-color: white;
 	z-index: -1;
@@ -415,13 +415,12 @@ p {
 	overflow: hidden;
 	z-index: 1;
 	/* height: 250px; */
-	transition: 0.3s ease transform;
 }
 
-#skills .skills-item:hover{
+/* #skills .skills-item:hover{
 	transform: scale(1.02);
 	box-shadow: 0px 0px 20px 0px #0000002c;
-}
+} */
 
 
 
@@ -660,7 +659,7 @@ p {
 }
 
 #about .col-right h2 {
-	font-size: 1.8rem;
+	font-size: 1.7rem;
 	font-weight: 400;
 	letter-spacing: 0.2rem;
 	margin-bottom: 10px;
@@ -670,11 +669,13 @@ p {
 	margin-bottom: 10px;
 	color: black;
 	text-align: center;
+	font-size: 1.2rem;
+    line-height: 1.8rem
 }
 
 #about .cta {
 	color: black;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	margin-top: 20px;
 	padding: 10px 20px;
 	font-size: 2rem;
@@ -1424,14 +1425,14 @@ p {
 
 #home h2{
     position: absolute;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: white;
     text-align: right;
 	font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    padding: 8px 12px;
+    padding: 7px 10px;
     background-color: crimson;
-	top: 94vh;
+	top: 85vh;
 	right: 0;
 	cursor: wait;
 }
