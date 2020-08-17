@@ -13,8 +13,8 @@ $(window).on("load", function(){
 $(function() {
 
     AOS.init({
-        duration: 800,
-        once: true,
+        duration: 600,
+        delay: 50,
     });
 
     $('#home').mousemove(function(e){
