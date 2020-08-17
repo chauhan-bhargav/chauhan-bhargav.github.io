@@ -20,6 +20,7 @@ $(function() {
 
     if($( window ).width()<1200){
         $(".skills-item").attr("data-aos-delay","0");
+        $(".skills-item").attr("data-aos","zoom-in-up");
     }
 
     
