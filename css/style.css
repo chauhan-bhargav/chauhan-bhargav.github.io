@@ -1420,3 +1420,18 @@ p {
     margin-left: 10px;
 	margin-right: 10px;
 }
+
+
+#home h2{
+    position: absolute;
+    font-size: 1.1rem;
+    color: white;
+    text-align: right;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 8px 12px;
+    background-color: crimson;
+	top: 94vh;
+	right: 0;
+	cursor: wait;
+}

@@ -17,11 +17,11 @@ $(function() {
         delay: 50,
     });
 
-    $('#home').mousemove(function(e){
-        var moveX = (e.pageX * -1/155); 
-        var moveY = (e.pageY * -1/155); 
-        $(this).css('background-position', moveX + 'px  ' + moveY + 'px')
-    });
+    // $('#home').mousemove(function(e){
+    //     var moveX = (e.pageX * -1/155); 
+    //     var moveY = (e.pageY * -1/155); 
+    //     $(this).css('background-position', moveX + 'px  ' + moveY + 'px')
+    // });
 
 
     const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
