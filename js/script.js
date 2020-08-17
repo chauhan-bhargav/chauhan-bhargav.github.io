@@ -6,10 +6,16 @@ $(window).on("load", function(){
     }, 500);
     $("h1").removeClass("preload");
     $("span").removeClass("preload");
+    
 });
 
 
 $(function() {
+
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
 
     $('#home').mousemove(function(e){
         var moveX = (e.pageX * -1/155); 
@@ -111,6 +117,8 @@ $(function() {
         }
         
     }
+
+    
 });
 
 
