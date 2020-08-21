@@ -1327,6 +1327,16 @@ p {
 	outline: none;
 }
 
+.modal-content .modal-body .ref-text p {
+	font-size: 1.1rem;
+    font-weight: 400;
+    text-align: right;
+    line-height: 1.5rem;
+    padding-top: 50px;
+    font-style: italic;
+	
+}
+
 @media screen and (max-width: 940px) {
     .gal-container a {
         width: 48%;
