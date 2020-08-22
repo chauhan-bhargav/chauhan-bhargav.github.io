@@ -620,11 +620,8 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	/* background: #454e55;  
-	background: -webkit-linear-gradient(to right, #1f4266, #2e6c96); 
-	background: linear-gradient(to right, #1f4266, #2e6c96); */
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.1;
+	opacity: 0.15;
 }
 
 #projects .project-img img{
@@ -1448,4 +1445,10 @@ p {
 	top: 85vh;
 	right: 0;
 	cursor: wait;
+}
+
+
+.publication p{
+	border-left: 8px solid rgba(78, 78, 78, 0.404);
+	padding-left: 10px;
 }
