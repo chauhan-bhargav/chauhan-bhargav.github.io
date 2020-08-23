@@ -1336,7 +1336,7 @@ p {
 
 @media screen and (max-width: 940px) {
     .gal-container a {
-        width: 48%;
+        width: 80%;
 	}
 	.gal-container a img {
 		width: 100%;
