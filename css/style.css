@@ -1339,11 +1339,14 @@ p {
 }
 .working {
 	padding-bottom: 20px;
+	width: 100%;
+	
 }
 
 .working video{
-	width: 75%;
-	padding-top: 5px;
+	width: 50%;
+	padding-top: 10px;
+	
 }
 .working video:focus{
 	outline: none;
@@ -1370,7 +1373,7 @@ p {
 	}
 
 	.working video{
-		width: 100%;
+		width: 80%;
 	}
 }
 
