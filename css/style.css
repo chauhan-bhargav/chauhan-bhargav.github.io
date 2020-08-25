@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Lobster&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=PT+Serif:wght@700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:wght@400;500;700&display=swap');
 
-
 *{
 	padding: 0;
 	margin: 0;
@@ -30,7 +29,6 @@ a {
 img {
 	height: 100%;
 	width: 100%;
-	/* object-fit: cover; */
 }
 
 p {
@@ -89,14 +87,49 @@ p {
 ::-webkit-scrollbar{
 	width: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
 	background: linear-gradient(#42d8f3 , #029df7);
 	border-radius: 6px;
 }
 
-/* Header */
+/* ############################################################### */
+/* Loader */
+/* ############################################################### */
+#loader {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	background-color: black;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 
+#loader .loader_gif {
+	width: 64px;
+	height: 64px;
+	background: url(../img/preloaders/5.gif);
+	background-repeat: no-repeat;
+	padding-bottom: 80px;
+}
+
+#loader .greeting h1{
+	font-size: 2rem;
+	color:white;
+	font-weight: 300;
+	font-family: 'Kaushan Script', cursive;
+}
+/* ############################################################### */
+/* End Loader */
+/* ############################################################### */
+
+/* ############################################################### */
+/* Header */
+/* ############################################################### */
 #header {
 	position: fixed;
 	z-index: 100;
@@ -266,12 +299,13 @@ p {
 #header .active .bar::after{
 	top: 0;
 }
-
+/* ############################################################### */
 /* End Header */
+/* ############################################################### */
 
-
+/* ############################################################### */
 /* Home section */
-
+/* ############################################################### */
 #home {
 	background-image: url(../img/slide8.jpg);
 	background-size: cover;
@@ -366,9 +400,99 @@ p {
 	background-color: crimson;
 }
 
-/* End Home section */
+#home .home .preload  {
+	animation: none !important;
+}
 
+#home h2{
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    text-align: right;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 7px 10px;
+    background-color: crimson;
+	top: 85vh;
+	right: 0;
+	cursor: wait;
+}
+/* ############################################################### */
+/* End Home section */
+/* ############################################################### */
+
+/* ############################################################### */
+/* About Section */
+/* ############################################################### */
+
+#about .about {
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+
+#about .col-left {
+	width: 205px;
+	height: 360px;
+}
+
+#about .col-right {
+	width: 100%;
+}
+
+#about .col-right h2 {
+	font-size: 1.7rem;
+	font-weight: 400;
+	letter-spacing: 0.2rem;
+	margin-bottom: 10px;
+}
+
+#about .col-right p {
+	margin-bottom: 10px;
+	color: black;
+	text-align: center;
+	font-size: 1.4rem;
+    line-height: 2.2rem
+}
+
+#about .cta {
+	color: black;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 2rem;
+}
+
+#about .cta:hover {
+	color: white;
+}
+
+#about .col-left .about-img {
+	height: 90%;
+	width: 100%;
+	position: relative;
+	border: 10px solid white;
+}
+
+#about .col-left .about-img::after {
+	content: '';
+	position: absolute;
+	left: -30px;
+	top: 20px;
+	height: 98%;
+	width: 98%;
+	border: 8px solid crimson;
+	z-index: -1;
+}
+/* ############################################################### */
+/* End About Section */
+/* ############################################################### */
+
+/* ############################################################### */
 /* Skills section */
+/* ############################################################### */
 
 #skills .skills {
 	flex-direction: column;
@@ -422,8 +546,6 @@ p {
 	transform: scale(1.02);
 	box-shadow: 0px 0px 20px 0px #0000002c;
 } */
-
-
 
 #skills .skills-bottom .skill1 {
 	background-image: url(../img/ic_1.jpg);
@@ -526,10 +648,13 @@ p {
 	font-weight: 400;
 	font-size: 1.3rem;
 }
-
+/* ############################################################### */
 /* End Skills section */
+/* ############################################################### */
 
+/* ############################################################### */
 /* Projects Section */
+/* ############################################################### */
 
 #projects .projects {
 	flex-direction: column;
@@ -555,6 +680,10 @@ p {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+}
+
+#projects .all-projects .read-more-cont {
+	display: none;
 }
 
 #projects .project-item {
@@ -641,78 +770,251 @@ p {
 	transform: scale(1.1);
 }
 
-/* End Projects Section */
-
-/* About Section */
-
-/* #about {
-	background: linear-gradient(to right, #83a4d4, #b6fbff);
-} */
-#about .about {
-	flex-direction: column-reverse;
-	text-align: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 20px;
-}
-
-#about .col-left {
-	width: 205px;
-	height: 360px;
-}
-
-#about .col-right {
-	width: 100%;
-}
-
-#about .col-right h2 {
-	font-size: 1.7rem;
+#projects .projects #myBtn {
+	display: inline-block;
+	padding: 7px 20px;
+	color: white;
+	background-color: transparent;
+	border: 1px solid white;
+	font-size: 1.5rem;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
-	letter-spacing: 0.2rem;
-	margin-bottom: 10px;
-}
-
-#about .col-right p {
-	margin-bottom: 10px;
-	color: black;
-	text-align: center;
-	font-size: 1.4rem;
-    line-height: 2.2rem
-}
-
-#about .cta {
-	color: black;
-	margin-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
 	margin-top: 20px;
-	padding: 10px 20px;
-	font-size: 2rem;
+	transition: 0.4s ease;
+	transition-property: background-color, color;
+	cursor: pointer;
+	border-radius: 1px;
+}
+#projects .projects #myBtn:focus{
+	outline: none;
+}
+#projects .projects #myBtn:hover {
+	color: black;
+	background-color: white;
+}
+/* ############################################################### */
+/* End Projects Section */
+/* ############################################################### */
+
+/* ############################################################### */
+/* Projects Modal */
+/* ############################################################### */
+
+.modal {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: -10%;
+	z-index: 500;
+	visibility: hidden;
+	opacity:0;
+	transition: all 0.3s;
+}
+.modal.open{
+	visibility: visible;
+	opacity:1;	
+	transition: 0.3s;
+	top: 0px;
+  }
+
+.modal-content {
+	background-color: #ffffff;
+	width: 1000px;
+	position: absolute;
+	left: 50%;
+	top: 53%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.30);
 }
 
-#about .cta:hover {
+.modal-content .modal-header{
+	padding: 15px 40px 15px 15px;
+	border-bottom: 1px solid #dddddd;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
 }
-
-#about .col-left .about-img {
-	height: 90%;
-	width: 100%;
-	position: relative;
-	border: 10px solid white;
+.modal-content .modal-header h1{
+	font-size: 2.3rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: white;
 }
-
-#about .col-left .about-img::after {
-	content: '';
+.modal-content .modal-header .close {
 	position: absolute;
-	left: -30px;
-	top: 20px;
-	height: 98%;
-	width: 98%;
-	border: 8px solid crimson;
-	z-index: -1;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 35px;
+    line-height: 30px;
+    right: 5px;
+    top: 5px;
+}
+.modal-content .modal-header .close:hover,
+.modal-content .modal-header .close:focus {
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
 }
 
-/* End About Section */
+.modal-content .modal-body{
+	padding: 15px;
+	max-height: 450px;
+	overflow-y: auto;
+}
 
+.modal-content .modal-body h1{
+	font-size: 2.2rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.modal-content .modal-body p {
+	color: black;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	padding-bottom: 10px;
+}
+
+.modal-content .modal-body a {
+	color: black;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+}
+
+.modal-content .modal-footer{
+	padding: 15px;
+	border-top: 1px solid #dddddd;
+	text-align: right;
+}
+.modal-content .modal-footer .btn {
+	padding: 7px 20px;
+	color: black;
+	background-color: transparent;
+	border: 1px solid black;
+	font-size: 1.5rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;	
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+	cursor: pointer;
+	border-radius: 1px;
+}
+.modal-content .modal-footer .btn:focus {
+	outline: none;
+}
+
+.modal-content .modal-footer .close {
+	position: absolute;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 35px;
+    line-height: 30px;
+    right: 5px;
+    top: 5px;
+}
+.modal-content .modal-footer .close:hover,
+.modal-content .modal-footer .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.container{
+	transition: 0.3s ease;
+}
+.container.blur.active{
+	filter: blur(15px);
+}
+
+.modal .image-gal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .gal-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+	margin-bottom: 20px;
+}
+
+.modal .gal-container a {
+	width: 30%;
+    padding: 5px;
+    margin: 2px;
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+.modal .gal-container a img {
+    width: 100%;
+    height: 100%;
+	position: relative;
+	/* padding: 2px;
+	border: 2px solid black; */
+}
+
+.modal .gal-container a:hover{
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+    /* transform: scale(1.05); */
+}
+
+.modal .gal-container figcaption {
+    color: black;
+    text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+}
+.modal .working {
+	padding-bottom: 20px;
+	width: 100%;
+	
+}
+
+.modal .working video{
+	width: 50%;
+	padding-top: 10px;
+	
+}
+.modal .working video:focus{
+	outline: none;
+}
+
+.modal .modal-content .modal-body .ref-text p {
+	font-size: 1.1rem;
+    font-weight: 400;
+    text-align: right;
+    line-height: 1.5rem;
+    padding-top: 50px;
+    font-style: italic;
+}
+
+.modal .publication p{
+	border-left: 8px solid rgba(78, 78, 78, 0.404);
+	padding-left: 10px;
+}
+/* ############################################################### */
+/* End Projects Modal */
+/* ############################################################### */
+
+/* ############################################################### */
 /* Contact Section */
+/* ############################################################### */
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
@@ -765,9 +1067,35 @@ p {
 	font-weight: 400;
 }
 
-/* End Contact Section */
+#contact .contact p{
+    color: black;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    margin-top: 0px;
+    line-height: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}
 
+#contact .contact h2 {
+    letter-spacing: 0.2rem;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 10px;
+	margin-right: 10px;
+}
+/* ############################################################### */
+/* End Contact Section */
+/* ############################################################### */
+
+/* ############################################################### */
 /* Footer */
+/* ############################################################### */
 
 #footer {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
@@ -825,11 +1153,13 @@ p {
 #footer .social-item:hover a {
 	color: crimson;
 }
-
+/* ############################################################### */
 /* End Footer */
+/* ############################################################### */
 
-/* -------------------------------------------------------------------------------------------- */
-
+/*==========================================================================================================================*/
+/* Media Query For mobile */
+/*==========================================================================================================================*/
 @media only screen and (max-width: 768px) {
 	#header .header .nav-bar .brand h1 {
 		font-size: 1.9rem;
@@ -840,9 +1170,13 @@ p {
 		margin-left: 0px;
 	}
 }
+/*==========================================================================================================================*/
+/* End Media Query For mobile */
+/*==========================================================================================================================*/
 
-
+/*==========================================================================================================================*/
 /* Media Query For Tablet */
+/*==========================================================================================================================*/
 @media only screen and (min-width: 768px) {
 	.cta {
 		font-size: 2.5rem;
@@ -1006,13 +1340,14 @@ p {
 		font-size: 1.4rem;
 	}
 	/* End Footer */
-
 }
+/*==========================================================================================================================*/
 /* End Media Query For Tablet */
+/*==========================================================================================================================*/
 
-/* -------------------------------------------------------------------------------------------- */
-
+/*==========================================================================================================================*/
 /* Media Query For Desktop */
+/*==========================================================================================================================*/
 @media only screen and (min-width: 1200px) {
 
 	/* header */
@@ -1051,17 +1386,62 @@ p {
 	}
 
 }
+/*==========================================================================================================================*/
 /* End  Media Query For Desktop */
+/*==========================================================================================================================*/
 
+/*==========================================================================================================================*/
+/* Modal Media Query*/
+/*==========================================================================================================================*/
+@media only screen and (max-width: 1050px) {
+	.modal .modal-content{
+		width: calc(100% - 80px);
+	}
+	.modal-content .modal-body {
+		max-height: 450px;
+	}
+	.modal .gal-container a {
+        width: 48%;
+	}
+	.modal .gal-container a img {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	.modal .working video{
+		width: 80%;
+	}
+}
 
+@media only screen and (max-width: 768px) {
+	.modal .modal-content{
+   	 	width: calc(100% - 30px);
+   	}
+   	.modal-content .modal-body {
+    	max-height: 400px;
+	} 
+	.modal .gal-container figcaption {
+        font-size: 8px;
+    }
+	.modal .gal-container a{
+        padding: 0;
+	}
+    .modal .gal-container a:hover{
+        transform: none;
+        box-shadow: none;
+	}
+	.modal .working video{
+		width: 100%;
+		margin: auto;
+	}
+}
+/*==========================================================================================================================*/
+/* End Modal Media Query*/
+/*==========================================================================================================================*/
 
-
-
-
-
-
-
+/*==========================================================================================================================*/
 /* Key Frames*/
+/*==========================================================================================================================*/
 @keyframes hamburger_pulse {
 	0%{
 		opacity: 1;
@@ -1087,396 +1467,13 @@ p {
 	100%{
 		color: white;
 	}
-	
 }
 @keyframes text_reveal_name {
 	100%{
 		color: crimson;
 		/* font-weight: 700; */
 	}
-	
 }
-
+/*==========================================================================================================================*/
 /* End Key Frames*/
-
-
-/* ====================================================== */
-.all-projects .read-more-cont {
-	display: none;
-}
-
-#myBtn {
-	display: inline-block;
-	padding: 7px 20px;
-	color: white;
-	background-color: transparent;
-	border: 1px solid white;
-	font-size: 1.5rem;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: 0.05rem;
-	margin-top: 20px;
-	transition: 0.4s ease;
-	transition-property: background-color, color;
-	cursor: pointer;
-	border-radius: 1px;
-}
-#myBtn:focus{
-	outline: none;
-}
-#myBtn:hover {
-	color: black;
-	background-color: white;
-}
-
-
-.modal {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: -10%;
-	z-index: 500;
-	visibility: hidden;
-	opacity:0;
-	transition: all 0.3s;
-}
-.modal.open{
-	visibility: visible;
-	opacity:1;	
-	transition: 0.3s;
-	top: 0px;
-  }
-
-.modal-content {
-	background-color: #ffffff;
-	width: 1000px;
-	position: absolute;
-	left: 50%;
-	top: 53%;
-	transform: translate(-50%,-50%);
-	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.30);
-}
-
-.modal-content .modal-header{
-	padding: 15px 40px 15px 15px;
-	border-bottom: 1px solid #dddddd;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	color: white;
-}
-.modal-content .modal-header h1{
-	font-size: 2.3rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	color: white;
-}
-.modal-content .modal-header .close {
-	position: absolute;
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    color: #aaaaaa;
-    font-size: 35px;
-    line-height: 30px;
-    right: 5px;
-    top: 5px;
-}
-.modal-content .modal-header .close:hover,
-.modal-content .modal-header .close:focus {
-	color: #fff;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.modal-content .modal-body{
-	padding: 15px;
-	max-height: 450px;
-	overflow-y: auto;
-}
-
-.modal-content .modal-body h1{
-	font-size: 2.2rem;
-	font-weight: 500;
-	margin-bottom: 5px;
-}
-
-.modal-content .modal-body p {
-	color: black;
-	font-size: 1.4rem;
-	line-height: 2.2rem;
-	padding-bottom: 10px;
-}
-
-.modal-content .modal-body a {
-	color: black;
-	font-size: 1.4rem;
-	line-height: 2.2rem;
-}
-/* .modal-content .modal-body img,
-.modal-content .modal-body video{
-	width: 40%;
-	display: block;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-left: auto;
-	margin-right: auto;
-} */
-.modal-content .modal-footer{
-	padding: 15px;
-	border-top: 1px solid #dddddd;
-	text-align: right;
-}
-.modal-content .modal-footer .btn {
-	padding: 7px 20px;
-	color: black;
-	background-color: transparent;
-	border: 1px solid black;
-	font-size: 1.5rem;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: 0.05rem;	
-	transition: 0.3s ease;
-	transition-property: background-color, color;
-	cursor: pointer;
-	border-radius: 1px;
-}
-.modal-content .modal-footer .btn:focus {
-	outline: none;
-}
-
-.modal-content .modal-footer .close {
-	position: absolute;
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    color: #aaaaaa;
-    font-size: 35px;
-    line-height: 30px;
-    right: 5px;
-    top: 5px;
-}
-.modal-content .modal-footer .close:hover,
-.modal-content .modal-footer .close:focus {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.container{
-	transition: 0.3s ease;
-}
-.container.blur.active{
-	filter: blur(15px);
-}
-
-@media only screen and (max-width: 1050px) {
-	.modal .modal-content{
-		width: calc(100% - 80px);
-	}
-	.modal-content .modal-body {
-		max-height: 450px;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.modal .modal-content{
-   	 	width: calc(100% - 30px);
-   }
-   .modal-content .modal-body {
-    max-height: 400px;
-   }
-}
-/* ====================================================== */
-
-
-.image-gal {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.gal-container {
-    position: relative;
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-	margin-bottom: 20px;
-}
-
-.gal-container a {
-	width: 30%;
-    padding: 5px;
-    margin: 2px;
-    text-decoration: none;
-    transition: 0.3s all;
-}
-
-.gal-container a img {
-    width: 100%;
-    height: 100%;
-	position: relative;
-	/* padding: 2px;
-	border: 2px solid black; */
-}
-
-.gal-container a:hover{
-    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
-    /* transform: scale(1.05); */
-}
-
-.gal-container figcaption {
-    color: black;
-    text-align: center;
-	font-size: 12px;
-	font-weight: 400;
-}
-.working {
-	padding-bottom: 20px;
-	width: 100%;
-	
-}
-
-.working video{
-	width: 50%;
-	padding-top: 10px;
-	
-}
-.working video:focus{
-	outline: none;
-}
-
-.modal-content .modal-body .ref-text p {
-	font-size: 1.1rem;
-    font-weight: 400;
-    text-align: right;
-    line-height: 1.5rem;
-    padding-top: 50px;
-    font-style: italic;
-	
-}
-
-@media screen and (max-width: 940px) {
-    .gal-container a {
-        width: 48%;
-	}
-	.gal-container a img {
-		width: 100%;
-		height: 100%;
-		position: relative;
-	}
-
-	.working video{
-		width: 80%;
-	}
-}
-
-@media screen and (max-width: 768px) {
-    
-    .gal-container figcaption {
-        font-size: 8px;
-    }
-
-	.gal-container a{
-        padding: 0;
-	}
-    .gal-container a:hover{
-        transform: none;
-        box-shadow: none;
-	}
-	.working video{
-		width: 100%;
-		margin: auto;
-	}
-}
-
-  /* ====================================================== */
-
-
-#loader {
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	background-color: black;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-
-#loader .loader_gif {
-	width: 64px;
-	height: 64px;
-	background: url(../img/preloaders/5.gif);
-	background-repeat: no-repeat;
-	padding-bottom: 80px;
-	
-}
-
-#loader .greeting h1{
-	font-size: 2rem;
-	color:white;
-	font-weight: 300;
-	font-family: 'Kaushan Script', cursive;
-}
-
-
-#home .home .preload  {
-	animation: none !important;
-}
-
-
-#contact .contact p{
-    color: black;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 1.3rem;
-    margin-top: 0px;
-    line-height: 2.2rem;
-    font-weight: 400;
-    letter-spacing: 0.2rem;
-}
-
-
-#contact .contact h2 {
-    letter-spacing: 0.2rem;
-    font-family: 'Montserrat';
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: center;
-    margin-top: 0px;
-    margin-left: 10px;
-	margin-right: 10px;
-}
-
-
-#home h2{
-    position: absolute;
-    font-size: 1rem;
-    color: white;
-    text-align: right;
-	font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    padding: 7px 10px;
-    background-color: crimson;
-	top: 85vh;
-	right: 0;
-	cursor: wait;
-}
-
-
-.publication p{
-	border-left: 8px solid rgba(78, 78, 78, 0.404);
-	padding-left: 10px;
-}
+/*==========================================================================================================================*/
