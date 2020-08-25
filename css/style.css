@@ -1181,6 +1181,7 @@ p {
 	color: black;
 	font-size: 1.4rem;
 	line-height: 2.2rem;
+	padding-bottom: 10px;
 }
 
 .modal-content .modal-body a {
@@ -1286,7 +1287,7 @@ p {
 }
 
 .gal-container a {
-    width: 30%;
+	width: 30%;
     padding: 5px;
     margin: 2px;
     text-decoration: none;
@@ -1336,7 +1337,7 @@ p {
 
 @media screen and (max-width: 940px) {
     .gal-container a {
-        width: 80%;
+        width: 48%;
 	}
 	.gal-container a img {
 		width: 100%;
