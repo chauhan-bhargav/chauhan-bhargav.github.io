@@ -85,7 +85,6 @@ $(function() {
             const item =event.target.parentElement;
             const h1 = item.querySelector("h1").innerHTML;
             const readMoreCont = item.querySelector(".read-more-cont").innerHTML;
-            console.log(readMoreCont)
             modal.querySelector("h1").innerHTML = h1;
             modal.querySelector(".modal-body").innerHTML = readMoreCont;
             popupBox();
@@ -115,7 +114,6 @@ $(function() {
 
     function toggle(){
         var blur = document.getElementsByClassName('blur');
-        console.log(blur);
         for (i = 0; i < blur.length; i++) {
             blur[i].classList.toggle('active');
         }
