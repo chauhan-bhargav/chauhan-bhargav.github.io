@@ -15,7 +15,7 @@ $(function() {
     AOS.init({
         duration: 600,
         delay: 50,
-        // once: true,
+        once: true,
     });
 
     if($( window ).width()<1200){
@@ -23,11 +23,11 @@ $(function() {
         $(".skills-item").attr("data-aos","zoom-in-up");
     }
 
-    if($( window ).width()<768){
-        $(".skills-item").attr("data-aos-delay","0");
-        $(".skills-item-even").attr("data-aos","slide-left");
-        $(".skills-item-odd").attr("data-aos","slide-right");
-    }
+    // if($( window ).width()<768){
+    //     $(".skills-item").attr("data-aos-delay","0");
+    //     $(".skills-item-even").attr("data-aos","slide-left");
+    //     $(".skills-item-odd").attr("data-aos","slide-right");
+    // }
 
     
     // $('#home').mousemove(function(e){
