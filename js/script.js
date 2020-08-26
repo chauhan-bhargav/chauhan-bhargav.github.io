@@ -41,7 +41,7 @@ $(function() {
     document.addEventListener('scroll', () => {
         var scroll_position = window.scrollY;
         if (scroll_position > 100) {
-            header.style.backgroundColor = 'rgb(41, 50, 60)';
+            header.style.backgroundColor = '#1a2430';
         } else {
             header.style.backgroundColor = 'transparent';
         }
@@ -89,27 +89,26 @@ $(function() {
             modal.querySelector(".modal-body").innerHTML = readMoreCont;
             popupBox();
             toggle();
-            // $('body').css('overflow','hidden')
         }
-
     })
 
     modalCloseBtn.addEventListener("click", popupBox);
     modalCloseIcon.addEventListener("click", popupBox);
     modalCloseBtn.addEventListener("click", toggle);
     modalCloseIcon.addEventListener("click", toggle);
+    modalCloseBtn.addEventListener("click", scrollReset);
+    modalCloseIcon.addEventListener("click", scrollReset);
 
     modal.addEventListener("click", function(event){
         if(event.target == modal){
         popupBox();
         toggle();
-        // $('body').css('overflow','auto')
+        scrollReset();
         }
     })
 
     function popupBox(){
         modal.classList.toggle("open");
-        // $('body').css('overflow','auto')
     }
 
     function toggle(){
@@ -119,5 +118,8 @@ $(function() {
         }
     }
 
-    
+    function scrollReset(){
+        var scrol = document.getElementById('modalBody');
+        scrol.scrollTop = 0;
+    }
 });
