@@ -41,7 +41,7 @@ $(function() {
     document.addEventListener('scroll', () => {
         var scroll_position = window.scrollY;
         if (scroll_position > 100) {
-            header.style.backgroundColor = 'rgb(41, 50, 60)';
+            header.style.backgroundColor = '#1a2430';
         } else {
             header.style.backgroundColor = 'transparent';
         }

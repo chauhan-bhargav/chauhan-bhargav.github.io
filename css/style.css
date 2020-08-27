@@ -704,8 +704,8 @@ p {
 	justify-content: center;
 	flex-direction: column;
 	color: white;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	
+	/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
+	background-color: #1F2833;
 }
 
 #projects .project-info h1 {
@@ -1096,8 +1096,9 @@ p {
 /* ############################################################### */
 
 #footer {
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
 	/* background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
+	background-color: #1f2833;
 }
 
 #footer .footer {
