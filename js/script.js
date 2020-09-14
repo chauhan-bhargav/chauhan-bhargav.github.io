@@ -38,15 +38,35 @@ $(function() {
         mobile_menu.classList.toggle('active');
     });
 
+    
+
     document.addEventListener('scroll', () => {
         var scroll_position = window.scrollY;
-        if (scroll_position > 100) {
+        var tmode = document.getElementsByTagName("BODY")[0].className;
+        if (scroll_position > 100 && tmode == "light") {
             header.style.backgroundColor = '#1a2430';
-        } else {
+        } else if(scroll_position > 100 && tmode == "dark"){
+            header.style.backgroundColor = '#0e0e0e';
+        }
+        else {
             header.style.backgroundColor = 'transparent';
         }
     });
-    
+
+    $(document).ready(function(){
+        $(".theme-mode").change(function(){
+            var tm = $(this).val();
+            var scroll_position = window.scrollY;
+            if(tm == 'light' && scroll_position > 100){
+                header.style.backgroundColor = '#1a2430';
+            }else if(tm == "dark" && scroll_position > 100){
+                header.style.backgroundColor = '#0e0e0e';
+            }else {
+                header.style.backgroundColor = 'transparent';
+            }
+        })
+    })
+
     menu_item.forEach((item) => {
         item.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -122,4 +142,24 @@ $(function() {
         var scrol = document.getElementById('modalBody');
         scrol.scrollTop = 0;
     }
+
+
+    $(".theme-mode").change(function(){
+        if($(this).val() == "light"){
+            $("body").removeClass("dark")
+            $("body").addClass("light")
+        }
+        else{
+            $("body").addClass("dark")
+            $("body").removeClass("light")
+        }
+    })
+
+    $(".toggle-btn").click(function(){
+        $(".setting").toggleClass("open");
+    })
+
+    $(".hamburger").click(function(){
+        $(".setting").toggleClass("off");
+    })
 });

@@ -27,6 +27,7 @@ a {
 img {
 	height: 100%;
 	width: 100%;
+	
 }
 
 p {
@@ -100,7 +101,7 @@ p {
 	background-color: black;
 	top: 0;
 	left: 0;
-	z-index: 1000;
+	z-index: 10000;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -183,8 +184,7 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	/* background-color: black; */
-	background-color: rgb(31, 30, 30);
+	background-color: #1a2430;
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -479,8 +479,8 @@ p {
 	position: absolute;
 	left: -30px;
 	top: 20px;
-	height: 98%;
-	width: 98%;
+	height: 100%;
+	width: 100%;
 	border: 8px solid crimson;
 	z-index: -1;
 }
@@ -600,7 +600,7 @@ p {
 	position: absolute;
 	left: 0;
 	top: 0;
-	height: 100%;
+	height: 100%;	
 	width: 100%;
 	background: #000000; 
 	background: -webkit-linear-gradient(to left, #434343, #000000);  
@@ -830,8 +830,8 @@ p {
 
 .modal-content .modal-header{
 	padding: 15px 40px 15px 15px;
-	border-bottom: 1px solid #dddddd;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	/* border-bottom: 1px solid #dddddd; */
+	background: #1a2430;
 	color: white;
 }
 .modal-content .modal-header h1{
@@ -1155,6 +1155,176 @@ p {
 /* ############################################################### */
 /* End Footer */
 /* ############################################################### */
+
+/* ############################################################### */
+/* Theme Mode start */
+/* ############################################################### */
+
+#theme .setting {
+	position: fixed;
+	top: 15%;
+	right: 0;
+	padding: 6px 14px;
+	background-color: white;
+	color: black;
+	z-index: 1000;
+	border-radius: 0 0 0 4px;
+	transition: 0.35s ease transform;
+	transform: translateX(100%);
+}
+
+#theme .setting.open {
+	transform: translateX(0%);
+}
+
+#theme .setting.off {
+	display: none;
+}
+
+#theme .setting .toggle-btn{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	color: white;
+	background-color: crimson;
+	left: -30px;
+	top: 0;
+	font-size: 1.6rem;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	border-radius: 4px 0 0 4px;
+}
+
+#theme .setting h2{
+	font-weight: 400;
+	font-size: 1.7rem;
+	margin-bottom: 8px;
+}
+
+#theme .theme.blur.active{
+	display: none;
+}
+
+#theme .setting label{
+	font-size: 1.3rem;
+	font-weight: 400;
+	margin-right: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+body.dark #theme .setting{
+	background-color: black;
+	color: white;
+}
+
+/* ############################################################### */
+/* Theme Mode End */
+/* ############################################################### */
+
+/* ############################################################### */
+/* Dark Mode Start */
+/* ############################################################### */
+
+body.dark{
+	background-color: black;
+} 
+
+body.dark #about .cta,
+body.dark .section-title,
+body.dark #about .col-right h2,
+body.dark #about .col-right p{
+	color: white;
+}
+
+body.dark #about .cta{
+	background-color: #0e0e0e;
+}
+
+body.dark #about .cta:hover{
+	background-color: crimson;
+}
+/* body.dark #about .col-left .about-img{
+	border: 10px solid #111111;
+} */
+body.dark #contact .contact h2,
+body.dark #contact .contact p,
+body.dark #contact .contact-info h1,
+body.dark #contact .contact-info a{
+	color: white;
+}
+
+body.dark #contact .contact-item{
+	background-color: #0e0e0e;
+	box-shadow: 0px 0px 8px 2px rgba(32, 32, 32, 0.295);
+}
+
+body.dark #contact .contact-item:hover{
+	box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+body.dark #footer,
+body.dark #projects .project-info{
+	background-color: #0e0e0e;
+}
+body.dark #skills .skills-top p{
+	color: white;
+}
+
+body.dark #skills .skills-item::after{
+	background:  linear-gradient(to left, #363636, #313131);
+}
+
+body.dark #header .nav-list ul{
+	background-color: #0e0e0e;
+}
+
+@media only screen and (min-width: 1200px) {
+	body.dark #header .nav-list ul{
+		background-color: transparent;
+	}
+}
+
+body.dark .modal-content .modal-footer,
+body.dark .modal-content .modal-header{
+	background-color: #0e0e0e;
+}
+
+body.dark .modal-content .modal-body{
+	background-color: #000;
+}
+
+body.dark #projects .projects-header p,
+body.dark .modal-content .modal-body a,
+body.dark .modal .gal-container figcaption,
+body.dark .modal-content .modal-body p,
+body.dark .list,
+body.dark .modal-content .modal-body h1{
+	color: white;
+}
+
+body.dark .modal .gal-container a:hover{
+	box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.8);
+}
+
+body.dark .modal .publication p {
+	border-left: 8px solid rgba(211, 211, 211, 0.4);
+}
+
+body.dark .modal-content .modal-footer{
+	border-top: none;
+}
+
+body.dark .modal-content .modal-footer .btn{
+	color: white;
+	border: 1px solid white;
+}
+
+/* ############################################################### */
+/* Dark Mode End*/
+/* ############################################################### */
+
+
 
 /*==========================================================================================================================*/
 /* Media Query For mobile */
