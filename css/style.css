@@ -979,16 +979,21 @@ p {
 	font-weight: 400;
 }
 .modal .working {
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	width: 100%;
-	
+	text-align: center;
 }
 
 .modal .working video{
 	width: 50%;
-	padding-top: 10px;
-	
+	padding-top: 20px;	
 }
+
+.modal .working p{
+	text-align: center;
+	font-size: 18px;
+}
+
 .modal .working video:focus{
 	outline: none;
 }
