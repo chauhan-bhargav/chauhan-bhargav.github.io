@@ -1,1 +1,1 @@
-Hi! I am Bhargav and this is My Portfolio Website.
+Hi! I am Bhargav and this is my Portfolio Website.
